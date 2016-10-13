@@ -15,6 +15,4 @@ public class BaseJogo {
 	public static ArrayList<String> local = new ArrayList<String>();
 	public static ArrayList<String> status = new ArrayList<String>();
 	
-	
-	
 }

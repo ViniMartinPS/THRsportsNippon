@@ -6,26 +6,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Jogo {
 
 	private int id;
-	private Equipe equipe1;
-	private Equipe equipe2;
+	private int idEquipe1;
+	private int idEquipe2;
 	private int placarEqp1;
 	private int placarEqp2;
 	private String esporte;
 	private String local;
 	private String status;
+	private int faseLevel;
 	
-	public Equipe getEquipe1() {
-		return equipe1;
-	}
-	public void setEquipe1(Equipe equipe1) {
-		this.equipe1 = equipe1;
-	}
-	public Equipe getEquipe2() {
-		return equipe2;
-	}
-	public void setEquipe2(Equipe equipe2) {
-		this.equipe2 = equipe2;
-	}
 	public int getPlacarEqp1() {
 		return placarEqp1;
 	}
@@ -61,6 +50,24 @@ public class Jogo {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getIdEquipe1() {
+		return idEquipe1;
+	}
+	public void setIdEquipe1(int idEquipe1) {
+		this.idEquipe1 = idEquipe1;
+	}
+	public int getIdEquipe2() {
+		return idEquipe2;
+	}
+	public void setIdEquipe2(int idEquipe2) {
+		this.idEquipe2 = idEquipe2;
+	}
+	public int getFaseLevel() {
+		return faseLevel;
+	}
+	public void setFaseLevel(int faseLevel) {
+		this.faseLevel = faseLevel;
 	}
 	
 }

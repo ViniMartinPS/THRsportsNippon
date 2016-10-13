@@ -3,11 +3,12 @@ package olimpiadas.games.negocios;
 import java.util.ArrayList;
 
 import olimpiadas.games.banco.BaseDados;
+import olimpiadas.games.bd.BD_Jogo;
 import olimpiadas.games.modelo.Jogo;
 
 public class RegrasJogo {
 	
-	
+	/*
 	public ArrayList<Jogo> getAllJogos(){
 		return BaseDados.getAllJogos();
 	}
@@ -27,5 +28,10 @@ public class RegrasJogo {
 	public Jogo getJogo (int id){
 		return BaseDados.getJogo(id);
 	}
-
+*/
+	public String updateJogo(Jogo jogo){
+		BD_Jogo jogoBD = new BD_Jogo();
+		return jogoBD.alteraJogo(jogo);
+	}
+	
 }

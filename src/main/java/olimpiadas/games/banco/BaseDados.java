@@ -11,6 +11,7 @@ import olimpiadas.games.modelo.Jogo;
 
 public class BaseDados {
 
+	/*
 	public static Equipe equipe1 ;
 	public static Equipe equipe2 ;
 	public static Equipe equipe3 ;
@@ -396,5 +397,5 @@ public class BaseDados {
 	public static ArrayList<Equipe> getEquipes(){
 		return null;
 	}
-	
+	*/
 }

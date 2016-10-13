@@ -7,6 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import olimpiadas.games.banco.BaseDados;
+import olimpiadas.games.modelo.Campeonato;
 import olimpiadas.games.modelo.CampeonatoJSON;
 import olimpiadas.games.negocios.RegrasCampeonato;
 
@@ -18,11 +19,10 @@ public class CampeonatoResource {
 	@GET
 	@Path("/{esporte}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public CampeonatoJSON getCampeonato(@PathParam("esporte") String esporteCampeonato){
-		BaseDados.inicialize();
-		return BaseDados.atualizaClassificacao(BaseDados.campeonato);
-		//return regras.getCampeonato(esporteCampeonato);
-		
+	public Campeonato getCampeonato(@PathParam("esporte") String esporteCampeonato){
+		regras.updateClassificacao(esporteCampeonato);
+		regras.inicializaMataMata(esporteCampeonato);
+		return regras.getCampeonatoBD(esporteCampeonato);
 	}
 	
 	

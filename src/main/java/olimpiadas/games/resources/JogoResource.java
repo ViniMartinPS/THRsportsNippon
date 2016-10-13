@@ -2,6 +2,7 @@ package olimpiadas.games.resources;
 
 import java.util.ArrayList;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -17,8 +18,8 @@ import olimpiadas.games.negocios.RegrasJogo;
 public class JogoResource {
 	
 	RegrasJogo regras = new RegrasJogo();
-
-	@GET
+/*
+@GET
 	@Path("/initialize")
 	public void initialize(){
 		BaseDados.inicialize();
@@ -39,6 +40,14 @@ public class JogoResource {
 								@PathParam("placarEqp1") int placarEqp1,
 								@PathParam("placarEqp2") int placarEqp2){
 		regras.atualizaPlacarJogo(idJogo, placarEqp1, placarEqp2, idCampeonato);
+	}
+	*/
+	@POST
+	@Path("/updateJogo")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public String updateJogo(Jogo jogo){
+		return regras.updateJogo(jogo);
 	}
 	
 }
