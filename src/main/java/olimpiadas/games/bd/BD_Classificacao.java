@@ -51,7 +51,26 @@ public class BD_Classificacao {
 				}
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			if (stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
+			// fecha a conexao
+			//
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
 		}
 		campeonato.setGrupo1(grupo1);
 		campeonato.setGrupo2(grupo2);

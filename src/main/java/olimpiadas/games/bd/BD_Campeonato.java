@@ -1,6 +1,7 @@
 package olimpiadas.games.bd;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -25,7 +26,24 @@ public class BD_Campeonato {
 				campeonato.setEsporte(rs.getString("esporte"));
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
+		}finally{
+			if (stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			// fecha a conexao
+			//
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		return campeonato;
 	}

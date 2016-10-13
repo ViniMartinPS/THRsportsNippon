@@ -53,6 +53,23 @@ public class BD_Jogo {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+		}finally{
+			if (stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			// fecha a conexao
+			//
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		campeonato.setJogosGrupo1(jogosGrupo1);
 		campeonato.setJogosGrupo2(jogosGrupo2);
@@ -169,6 +186,23 @@ public class BD_Jogo {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+		}finally{
+			if (stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+				e.printStackTrace();
+				}
+			}
+			// fecha a conexao
+			//
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		
 		campeonato.setJogosMataMata(jogosMataMata);
