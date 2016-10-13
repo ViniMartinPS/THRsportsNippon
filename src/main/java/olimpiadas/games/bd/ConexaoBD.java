@@ -14,7 +14,7 @@ public class ConexaoBD {
 					throw new RuntimeException(e);
 				}
 			}
-	/*		
+			
 public Connection obtemConexao() throws SQLException{
 	System.setProperty("javax.net.ssl.keyStore","rds-combined-ca-bundle.pem");
 	System.setProperty("javax.net.ssl.trustStore","truststore.jks");
@@ -24,14 +24,14 @@ public Connection obtemConexao() throws SQLException{
 			"xyi1h245niulusvv", 									//usuario ViniciusMartin << trabalho
 			"ixiy4hyhch15fsrj");									//senha
 }
-*/
-			public Connection obtemConexao() throws SQLException{
+
+/*	public Connection obtemConexao() throws SQLException{
 				return DriverManager.getConnection(
 						"jdbc:mysql://localhost:3306/thr_games_teste", 	//banco de dados
 						"root", 									//usuario ViniciusMartin << trabalho
 						"vinimartin");									//senha
 			}		
-			
+			*/
 }
 
 
